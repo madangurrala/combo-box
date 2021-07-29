@@ -39,8 +39,22 @@ namespace ComboBox
         {
             var selectedValue = cmbBox.SelectedItem as Material;
 
-            MessageBox.Show("Selected Material's Id is " + selectedValue.Id.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Id:" + selectedValue.Id.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void engilishBtn_Click(object sender, EventArgs e)
+        {
+            var updateLanguage = new UpdateLanguage();
+            updateLanguage.UpdateConfig("language", "en");
+            Application.Restart();
+        }
+
+        private void frenchBtn_Click(object sender, EventArgs e)
+        {
+            var updateLanguage = new UpdateLanguage();
+            updateLanguage.UpdateConfig("language", "fr-CA");
+            Application.Restart();
         }
     }
 }

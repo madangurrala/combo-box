@@ -29,48 +29,56 @@ namespace ComboBox
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cmbBox = new System.Windows.Forms.ComboBox();
             this.nameLable = new System.Windows.Forms.Label();
             this.revealBtn = new System.Windows.Forms.Button();
+            this.engilish = new System.Windows.Forms.Button();
+            this.frenchBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbBox
             // 
             this.cmbBox.FormattingEnabled = true;
-            this.cmbBox.Location = new System.Drawing.Point(285, 147);
+            resources.ApplyResources(this.cmbBox, "cmbBox");
             this.cmbBox.Name = "cmbBox";
-            this.cmbBox.Size = new System.Drawing.Size(121, 21);
-            this.cmbBox.TabIndex = 0;
             // 
             // nameLable
             // 
-            this.nameLable.AutoSize = true;
-            this.nameLable.Location = new System.Drawing.Point(214, 150);
+            resources.ApplyResources(this.nameLable, "nameLable");
             this.nameLable.Name = "nameLable";
-            this.nameLable.Size = new System.Drawing.Size(35, 13);
-            this.nameLable.TabIndex = 1;
-            this.nameLable.Text = "Name";
             // 
             // revealBtn
             // 
-            this.revealBtn.Location = new System.Drawing.Point(445, 145);
+            resources.ApplyResources(this.revealBtn, "revealBtn");
             this.revealBtn.Name = "revealBtn";
-            this.revealBtn.Size = new System.Drawing.Size(75, 23);
-            this.revealBtn.TabIndex = 2;
-            this.revealBtn.Text = "Show Id";
             this.revealBtn.UseVisualStyleBackColor = true;
             this.revealBtn.Click += new System.EventHandler(this.revealBtn_Click);
             // 
+            // engilish
+            // 
+            resources.ApplyResources(this.engilish, "engilish");
+            this.engilish.Name = "engilish";
+            this.engilish.UseVisualStyleBackColor = true;
+            this.engilish.Click += new System.EventHandler(this.engilishBtn_Click);
+            // 
+            // frenchBtn
+            // 
+            resources.ApplyResources(this.frenchBtn, "frenchBtn");
+            this.frenchBtn.Name = "frenchBtn";
+            this.frenchBtn.UseVisualStyleBackColor = true;
+            this.frenchBtn.Click += new System.EventHandler(this.frenchBtn_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.frenchBtn);
+            this.Controls.Add(this.engilish);
             this.Controls.Add(this.revealBtn);
             this.Controls.Add(this.nameLable);
             this.Controls.Add(this.cmbBox);
             this.Name = "Form1";
-            this.Text = "Materials Data";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,6 +89,8 @@ namespace ComboBox
         private System.Windows.Forms.ComboBox cmbBox;
         private System.Windows.Forms.Label nameLable;
         private System.Windows.Forms.Button revealBtn;
+        private System.Windows.Forms.Button engilish;
+        private System.Windows.Forms.Button frenchBtn;
     }
 }
 
