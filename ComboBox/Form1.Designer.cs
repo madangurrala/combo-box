@@ -70,7 +70,7 @@ namespace ComboBox
             this.Controls.Add(this.nameLable);
             this.Controls.Add(this.cmbBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Materials Data";
             this.ResumeLayout(false);
             this.PerformLayout();
 
